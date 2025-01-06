@@ -9,7 +9,10 @@ fetch('Suburb.json')
 // Fixed Price Suburbs List
 // Currently empty for Nunawading, but can be populated with suburbs and prices if needed in the future.
 const fixedPriceSuburbs = {
-
+    'Craigieburn': 90,
+    'Roxburgh Park': 90,
+    'Mernda': 90,
+    'Doreen': 90
 };
 
 // Rest of your existing script.js code...
@@ -58,7 +61,7 @@ document.getElementById('deliveryForm').addEventListener('submit', function(even
     let customerLocation = document.getElementById('location').value;
 
     // Always calculate and display the route
-    calculateAndDisplayRoute('396-408 Whitehorse Rd, Nunawading VIC 3131', customerLocation);
+    calculateAndDisplayRoute('308-320 Settlement Rd, Thomastown VIC 3074', customerLocation);
 
     let fixedPriceSuburb = Object.keys(fixedPriceSuburbs).find(suburb => customerLocation.includes(suburb));
     if (fixedPriceSuburb) {
@@ -195,17 +198,17 @@ function calculateDeliveryPrice(distanceInMeters) {
     } else if (distanceInKm <= 15) {
         calculatedPrice = 90;
     } else if (distanceInKm <= 20) {
-        calculatedPrice = 110;
+        calculatedPrice = 100;
     } else if (distanceInKm <= 25) {
-        calculatedPrice = 120;
+        calculatedPrice = 110;
     } else if (distanceInKm <= 35) {
-        calculatedPrice = 130;
+        calculatedPrice = 120;
     } else if (distanceInKm <= 45) {
-        calculatedPrice = 140;
+        calculatedPrice = 130;
     } else if (distanceInKm <= 55) {
-        calculatedPrice = 150;
+        calculatedPrice = 140;
     } else if (distanceInKm <= 65) {
-        calculatedPrice = 170;
+        calculatedPrice = 160;
     } else if (distanceInKm <= 75) {
         calculatedPrice = 190;
     } else if (distanceInKm <= 85) {
