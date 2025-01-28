@@ -12,7 +12,9 @@ const fixedPriceSuburbs = {
     'Craigieburn': 90,
     'Roxburgh Park': 90,
     'Mernda': 90,
-    'Doreen': 90
+    'South Morang': 90,
+    'Doreen': 90,
+    'Broadford': 180
 };
 
 // Rest of your existing script.js code...
@@ -198,17 +200,17 @@ function calculateDeliveryPrice(distanceInMeters) {
     } else if (distanceInKm <= 15) {
         calculatedPrice = 90;
     } else if (distanceInKm <= 20) {
-        calculatedPrice = 100;
-    } else if (distanceInKm <= 25) {
         calculatedPrice = 110;
-    } else if (distanceInKm <= 35) {
+    } else if (distanceInKm <= 25) {
         calculatedPrice = 120;
-    } else if (distanceInKm <= 45) {
+    } else if (distanceInKm <= 35) {
         calculatedPrice = 130;
-    } else if (distanceInKm <= 55) {
+    } else if (distanceInKm <= 45) {
         calculatedPrice = 140;
+    } else if (distanceInKm <= 55) {
+        calculatedPrice = 150;
     } else if (distanceInKm <= 65) {
-        calculatedPrice = 160;
+        calculatedPrice = 170;
     } else if (distanceInKm <= 75) {
         calculatedPrice = 190;
     } else if (distanceInKm <= 85) {
